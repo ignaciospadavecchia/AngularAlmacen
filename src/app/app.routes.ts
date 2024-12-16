@@ -12,16 +12,16 @@ export const routes: Routes = [
       children: [
         { path: '', redirectTo: '/biblioteca/categorias', pathMatch: 'full' },
         {
+          path: 'mapa',
+          loadComponent: () => import('./biblioteca/mapa/mapa.component').then(m => m.MapaComponent)
+        },
+        {
           path: 'categorias',
           loadComponent: () => import('./biblioteca/categorias/categorias.component').then((c) => c.CategoriasComponent)
         },
         {
           path: 'productos',
           loadComponent: () => import('./biblioteca/productos/productos.component').then((c) => c.ProductosComponent)
-        },
-        {
-          path: 'mapa',
-          loadComponent: () => import('./biblioteca/mapa/mapa.component').then(m => m.MapaComponent)
         }
       ]
     },
