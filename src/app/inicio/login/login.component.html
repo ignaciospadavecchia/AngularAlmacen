@@ -1,0 +1,69 @@
+<div class="login-container">
+  <div class="login-left">
+    <img src="assets/logo.png" alt="Logo" class="logo">
+    <h1>Welcome to Bastion</h1>
+    <p>Quis vel eros donec ac odio tempor orci dapibus. In hac habitasse platea dictumst quisque.</p>
+    
+    <div class="features">
+      <div class="feature">
+        <i class="pi pi-inbox"></i>
+        <div>
+          <h3>Unlimited Inbox</h3>
+          <p>Tincidunt nunc pulvinar sapien et. Vitae purus faucibus ornare suspendisse sed nisi lacus sed viverra.</p>
+        </div>
+      </div>
+      
+      <div class="feature">
+        <i class="pi pi-shield"></i>
+        <div>
+          <h3>Premium Security</h3>
+          <p>Scelerisque purus semper eget duis at tellus at urna. Sed risus pretium quam vulputate.</p>
+        </div>
+      </div>
+      
+      <div class="feature">
+        <i class="pi pi-cloud"></i>
+        <div>
+          <h3>Cloud Backups Inbox</h3>
+          <p>Egestas sed tempus urna et. Auctor elit sed vulputate mi sit amet mauris commodo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="login-right">
+    <h2>Login</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" type="email" pInputText formControlName="email" placeholder="Email address">
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input id="password" type="password" pInputText formControlName="password" placeholder="Password">
+      </div>
+
+      <div class="form-options">
+        <div class="remember-me">
+          <p-checkbox formControlName="remember" [binary]="true"></p-checkbox>
+          <label>Remember me</label>
+        </div>
+        <a href="#" class="forgot-password">Forgot password?</a>
+      </div>
+
+      <button pButton type="submit" label="Login" class="p-button-primary w-full"></button>
+
+      <div class="divider">
+        <span>OR</span>
+      </div>
+
+      <button pButton type="button" label="Sign in with GitHub" 
+              icon="pi pi-github" class="p-button-secondary w-full"></button>
+
+      <p class="sign-up-text">
+        Don't have an account? <a href="#">Sign up</a>
+      </p>
+    </form>
+  </div>
+</div>
